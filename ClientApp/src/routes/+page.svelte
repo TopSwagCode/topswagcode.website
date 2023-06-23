@@ -10,50 +10,18 @@
 </svelte:head>
 
 <section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
+	<div class="hero min-h-screen bg-base-200">
+		<div class="hero-content text-center">
+		  <div class="max-w-md">
+			<h1 class="text-5xl font-bold">Hello there</h1>
+			<p class="py-6">Welcome to topswagcode new website. Felt like it was time to move away from Jekyll and update the entire platform to also include API as part of the code base.</p>
+			<p class="py-6">The new site is built with Dotnet 7 API with static SPA hosted in static files. The SPA framework choosen is Sveltekit.</p>
+			<button class="btn btn-primary">Read more about me</button>
+		  </div>
+		</div>
+	  </div>
 </section>
 
 <style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
 
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
 </style>
