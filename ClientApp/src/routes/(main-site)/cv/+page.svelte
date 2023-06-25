@@ -14,14 +14,15 @@ E-mail: josh@topswagcode.com  <br>
 Born: 17/02/1987</p>
 
 <h1  id="work">Work</h1>
-<ul class="list-disc">
-	<li>2019 - Now: Brølstærk</li>
-	<li>2016 - 2019: First Agenda</li>
-	<li>2016: Wallmob</li>
-	<li>2014-2016: Stibo</li>
-	<li>2014 : Ebay / bilinfo.net (Internship + Bachelor assignment.)</li>
-	<li>2011-2013 : Novicell (Startet as intern and had my AP assignment here and afterwards hired fulltime)</li>
-	<li>2003-2006 : Fjord Line (Checkin Employee)</li>
+
+<ul class="w-96 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+	<li class="w-full px-4 py-2 border-b border-gray-200 rounded-t-lg dark:border-gray-600">2019 - Now: Brølstærk</li>
+	<li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">2016 - 2019: First Agenda</li>
+	<li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">2016: Wallmob</li>
+	<li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">2014-2016: Stibo</li>
+	<li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">2014 : Ebay / bilinfo.net (Internship + Bachelor assignment.)</li>
+	<li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">2011-2013 : Novicell (Startet as intern and had my AP assignment here and afterwards hired fulltime)</li>
+	<li class="w-full px-4 py-2 rounded-b-lg">2003-2006 : Fjord Line (Checkin Employee)</li>
 </ul>
 
 <h1 id="school">School</h1>
