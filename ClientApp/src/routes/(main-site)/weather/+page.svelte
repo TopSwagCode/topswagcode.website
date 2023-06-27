@@ -9,19 +9,7 @@
 </svelte:head>
 
 <Content headline="Weather forecasts">
-	<div class="text-column">
-		<p>
-			<button class="btn">Button</button>
-			<button class="btn btn-neutral">Neutral</button>
-			<button class="btn btn-primary">Button</button>
-			<button class="btn btn-secondary">Button</button>
-			<button class="btn btn-accent">Button</button>
-			<button class="btn btn-ghost">Button</button>
-			<button class="btn btn-link">Button</button>
-		</p>
-		<caption class="caption-top">
-			Weather forecasts
-		  </caption>
+	<div class="w-4xl">
 		{#if data.weatherForecasts.length}
 		<table class="table-auto">
 			<thead>

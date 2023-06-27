@@ -3,9 +3,7 @@
 	import logo from '$lib/images/svelte-logo.svg';
 	import github from '$lib/images/github.svg';
 	import { goto } from '$app/navigation';
-
-	console.log('test');
-
+	
 	const handleClick = (link) => {
 		goto(link);
 	}
@@ -16,7 +14,7 @@
 
 <div class="navbar bg-neutral text-neutral-content">
 	<div class="flex-1">
-	  <a class="btn btn-ghost normal-case text-xl">TopSwagCode</a>
+	  <a href="/" class="btn btn-ghost normal-case text-xl">TopSwagCode</a>
 	</div>
 	<div class="flex-none gap-2">
 	  <div class="form-control">
