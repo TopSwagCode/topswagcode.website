@@ -35,13 +35,13 @@
 	<div class="grid place-items-center p-5">
 		<div class="carousel carousel-end rounded-box content-center">
 			<div class="carousel-item">
-			<img src="https://topswagcode.com/assets/inastorm.jpg" alt="Drink" />
+				<img height="300" src="https://ik.imagekit.io/topswagcode/tr:h-300/inastorm.jpg" alt="Ina and Storm" />
 			</div> 
 			<div class="carousel-item">
-			<img src="https://topswagcode.com/assets/joshstorm.jpg" alt="Drink" />
+				<img height="300" src="https://ik.imagekit.io/topswagcode/tr:h-300/joshstorm.png" alt="Joshua and Storm" />
 			</div> 
 			<div class="carousel-item">
-			<img src="https://topswagcode.com/assets/pjevs.jpg" alt="Drink" />
+				<img height="300" src="https://ik.imagekit.io/topswagcode/tr:h-300/pjevs.jpg" alt="Cat Pjevs" />
 			</div>
 		</div>
 	</div>

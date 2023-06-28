@@ -1,6 +1,14 @@
 <script>
     export let data;
 	import Content from '../Content.svelte';
+	import { onMount } from 'svelte';
+
+	let weatherForecasts;
+
+	onMount(async () => {
+		const res = await fetch(`/api/WeatherForecast/`);
+		weatherForecasts = await res.json();
+	});
 </script>
 
 <svelte:head>
@@ -10,7 +18,7 @@
 
 <Content headline="Weather forecasts">
 	
-	{#if data.weatherForecasts.length}
+	{#if weatherForecasts?.length}
 	<table class="w-full border-collapse border">
 		<thead>
 			<tr>
@@ -21,7 +29,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			{#each data.weatherForecasts as weatherForecast}
+			{#each weatherForecasts as weatherForecast}
 			<tr>
 			<td class="border">{weatherForecast.date}</td>
 			<td class="border">{weatherForecast.temperatureC}</td>
@@ -31,7 +39,13 @@
 			{/each}
 		</tbody>
 	</table>
+	{:else}
+	<span class="loading loading-spinner loading-xs"></span>
+	<span class="loading loading-spinner loading-sm"></span>
+	<span class="loading loading-spinner loading-md"></span>
+	<span class="loading loading-spinner loading-lg"></span>
+	<span class="loading loading-spinner loading-md"></span>
+	<span class="loading loading-spinner loading-sm"></span>
+	<span class="loading loading-spinner loading-xs"></span>
 	{/if}
-	
-	
 </Content>

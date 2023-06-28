@@ -14,17 +14,24 @@ if (!app.Environment.IsDevelopment())
     app.UseHttpsRedirection();
 }
 
+var cacheMaxAgeOneWeek = (60 * 60 * 24 * 7).ToString();
+app.UseStaticFiles(new StaticFileOptions
+{
+    OnPrepareResponse = ctx =>
+    {
+        ctx.Context.Response.Headers.Append(
+             "Cache-Control", $"public, max-age={cacheMaxAgeOneWeek}");
+    }
+});
 
-app.UseStaticFiles();
 app.UseRouting();
-
 
 app.MapControllerRoute(
     name: "default",
     pattern: "api/{controller}/{action=Index}/{id?}");
 
 app.MapFallbackToFile("about", "about.html");
-app.MapFallbackToFile("weather", "index.html");
+app.MapFallbackToFile("weather", "weather.html");
 app.MapFallbackToFile("cv", "cv.html");
 app.MapFallbackToFile("boxboxbox", "boxboxbox.html");
 app.MapFallbackToFile("index.html");
