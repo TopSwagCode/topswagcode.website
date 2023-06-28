@@ -9,29 +9,29 @@
 </svelte:head>
 
 <Content headline="Weather forecasts">
-	<div class="w-4xl">
-		{#if data.weatherForecasts.length}
-		<table class="table-auto">
-			<thead>
-			  <tr>
-				<th>Date</th>
-				<th>Temperature C</th>
-				<th>Temperature F</th>
-				<th>Summary</th>
-			  </tr>
-			</thead>
-			<tbody>
-			  {#each data.weatherForecasts as weatherForecast}
-			  <tr>
-				<td>{weatherForecast.date}</td>
-				<td>{weatherForecast.temperatureC}</td>
-				<td>{weatherForecast.temperatureF}</td>
-				<td>{weatherForecast.summary}</td>
-			  </tr>
-			  {/each}
-			</tbody>
-		  </table>
-		  {/if}
-	</div>
+	
+	{#if data.weatherForecasts.length}
+	<table class="w-full border-collapse border">
+		<thead>
+			<tr>
+			<th class="border bg-accent">Date</th>
+			<th class="border bg-accent">°C</th>
+			<th class="border bg-accent">°F</th>
+			<th class="border bg-accent">Summary</th>
+			</tr>
+		</thead>
+		<tbody>
+			{#each data.weatherForecasts as weatherForecast}
+			<tr>
+			<td class="border">{weatherForecast.date}</td>
+			<td class="border">{weatherForecast.temperatureC}</td>
+			<td class="border">{weatherForecast.temperatureF}</td>
+			<td class="border">{weatherForecast.summary}</td>
+			</tr>
+			{/each}
+		</tbody>
+	</table>
+	{/if}
+	
 	
 </Content>

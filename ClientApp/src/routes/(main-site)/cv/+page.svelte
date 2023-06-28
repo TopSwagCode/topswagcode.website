@@ -108,6 +108,6 @@
 </Content>
 </div>
 
-<div class='fixed p-10 bottom-10 w-full'>
-    <button on:click={() => PrintPdf()} class='motion-safe:animate-bounce my-8 float-right px-5 py-2 btn btn-accent rounded-full focus:outline-none'>Print</button>
+<div class='hidden md:block fixed p-10 bottom-10 w-full'>
+    <button on:click={() => PrintPdf()} class=' motion-safe:animate-bounce my-8 float-right px-5 py-2 btn btn-accent rounded-full focus:outline-none'>Print</button>
 </div>

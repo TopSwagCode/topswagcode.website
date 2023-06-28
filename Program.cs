@@ -11,9 +11,10 @@ if (!app.Environment.IsDevelopment())
 {
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
+    app.UseHttpsRedirection();
 }
 
-app.UseHttpsRedirection();
+
 app.UseStaticFiles();
 app.UseRouting();
 
@@ -23,7 +24,7 @@ app.MapControllerRoute(
     pattern: "api/{controller}/{action=Index}/{id?}");
 
 app.MapFallbackToFile("about", "about.html");
-app.MapFallbackToFile("weather", "weather.html");
+app.MapFallbackToFile("weather", "index.html");
 app.MapFallbackToFile("cv", "cv.html");
 app.MapFallbackToFile("boxboxbox", "boxboxbox.html");
 app.MapFallbackToFile("index.html");
