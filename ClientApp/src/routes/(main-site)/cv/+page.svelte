@@ -72,7 +72,7 @@
 	
 	<ul class="text-sm font-medium border rounded-lg my-4">
 		<li class="bg-neutral text-neutral-content w-full px-4 py-2 border-b rounded-t-lg">School experience</li>
-		<li class="w-full px-4 py-2 border-b">2015-2016 : Master IT-Vest Module - Scalable Web Developement, P2P Networking and Docker</li>
+		<li class="w-full px-4 py-2 border-b">2015-2016 : Master IT-Vest Module - "Scalable Web Developement", "P2P Networking" and "Docker and Cloud computing"</li>
 		<li class="w-full px-4 py-2 border-b">2012-2014 : Bachelor in Software development at Business Academy Aarhus</li>
 		<li class="w-full px-4 py-2 border-b">2008-2011 : AP in Software development at Business Academy Aarhus</li>
 		<li class="w-full px-4 py-2 border-b">2006-2007 : Computer Science at Århus university (Not completd)</li>
@@ -87,6 +87,14 @@
 		<li class="w-full px-4 py-2 border-b">Development of Kosan Gas webshop, and associated business logic matrix.</li>
 		<li class="w-full px-4 py-2 rounded-b-lg">Development of new checkout flow for Punkt1.dk. The old checkout flow had to many step and many customers didn’t complete their order. The project was deployed in under a week and result could be seen instantly.</li>
 	</ul>
+
+	<ul class="text-sm font-medium border rounded-lg my-4">
+		<li class="bg-neutral text-neutral-content w-full px-4 py-2 border-b rounded-t-lg">Public talks given</li>
+		<li class="w-full px-4 py-2 border-b">The Future Is Here! WebAssembly for .NET Developers.</li>
+		<li class="w-full px-4 py-2 border-b">How to be a lazy software developer.</li>
+		<li class="w-full px-4 py-2 border-b">GRPC. G != Google</li>
+		<li class="w-full px-4 py-2 rounded-b-lg">OWASP top 10 and Immersive Labs for management and developers!</li>
+	</ul>	
 
 	<ul class="text-sm font-medium border rounded-lg my-4">
 		<li class="bg-neutral text-neutral-content w-full px-4 py-2 border-b rounded-t-lg">Skills</li>
@@ -104,7 +112,7 @@
 		<li class="w-full px-4 py-2 border-b">2006-2015 I worked as voluteer at Kidney Association’s youth department. During the years my task had grown including going to NNS in Oslo and CEAPIR in Zürich.</li>
 		<li class="w-full px-4 py-2 border-b">I speak and write Danish fluently.</li>
 		<li class="w-full px-4 py-2 rounded-b-lg">I speak and write English fluently</li>
-	</ul>	
+	</ul>
 </Content>
 </div>
 

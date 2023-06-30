@@ -12,14 +12,14 @@
 		Well never been good at telling about my self. I will try my best :) A few things describing me:
 	</p>
 
-	<ul>
-	<li>Code enthusiast.</li>
-	<li>Table top gamer.</li>
-	<li>Loving boyfriend.</li>
-	<li>Loving father.</li>
-	<li>Cat owner.</li>
+	
+	<ul class="p-1">
+		<li>Code enthusiast.</li>
+		<li>Table top gamer.</li>
+		<li>Loving boyfriend.</li>
+		<li>Loving father.</li>
+		<li>Cat owner.</li>
 	</ul>
-
 
 	<p class="p-1">
 	Going more in depth. I love to code. I love to learn and improve. Being that design patterns or new tech. That is why I attend meetups, hackathons and the sorts. This is also kind of the reason why I wanted to take up blogging. Sharing the awesome stuff I found. I have tried a couple of times and failed. Used to much time on “What plugins should I try?”, “What design / Theme do I want?”, “What do I want to blog about?” and so on. When I should simply just have made alot of small blog posts about what I had been looking on that week.
@@ -35,13 +35,13 @@
 	<div class="grid place-items-center p-5">
 		<div class="carousel carousel-end rounded-box content-center">
 			<div class="carousel-item">
-				<img height="300" src="https://ik.imagekit.io/topswagcode/tr:h-300/inastorm.jpg" alt="Ina and Storm" />
+				<img height="250" width="248.328" src="https://ik.imagekit.io/topswagcode/tr:h-250/inastorm.jpg" alt="Ina and Storm" />
 			</div> 
 			<div class="carousel-item">
-				<img height="300" src="https://ik.imagekit.io/topswagcode/tr:h-300/joshstorm.png" alt="Joshua and Storm" />
+				<img height="250" width="121.656" src="https://ik.imagekit.io/topswagcode/tr:h-250/joshstorm.png" alt="Joshua and Storm" />
 			</div> 
 			<div class="carousel-item">
-				<img height="300" src="https://ik.imagekit.io/topswagcode/tr:h-300/pjevs.jpg" alt="Cat Pjevs" />
+				<img height="250" width="333.328" src="https://ik.imagekit.io/topswagcode/tr:h-250/pjevs.jpg" alt="Cat Pjevs" />
 			</div>
 		</div>
 	</div>

@@ -1,11 +1,21 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddResponseCompression(options =>
+{
+    options.EnableForHttps = true;
+});
+
+var configuration = builder.Configuration;
 
 var app = builder.Build();
 
+app.UseResponseCompression();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -13,7 +23,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
     app.UseHttpsRedirection();
 }
-
+/*
 var cacheMaxAgeOneWeek = (60 * 60 * 24 * 7).ToString();
 app.UseStaticFiles(new StaticFileOptions
 {
@@ -23,7 +33,7 @@ app.UseStaticFiles(new StaticFileOptions
              "Cache-Control", $"public, max-age={cacheMaxAgeOneWeek}");
     }
 });
-
+*/
 app.UseRouting();
 
 app.MapControllerRoute(
