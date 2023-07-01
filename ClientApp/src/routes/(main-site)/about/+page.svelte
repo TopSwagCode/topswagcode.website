@@ -1,5 +1,23 @@
 <script>
+	import { onDestroy, onMount } from 'svelte';
 	import Content from '../Content.svelte';
+
+	let slideNumber = 0;
+	let timeout = 0;
+
+	onMount(() => {
+		setInterval(ChangeSlide, 5000);
+  	});
+
+	function ChangeSlide(){
+		slideNumber++;
+		slideNumber = slideNumber % 3;
+		window.history.replaceState(history.state, '', "/about/#slide"+slideNumber);
+	}
+
+	onDestroy(() => {
+		clearInterval(timeout);
+	});
 </script>
 
 <svelte:head>
@@ -8,26 +26,26 @@
 </svelte:head>
 
 <Content headline="About">
-	<p class="p-1">
+	<p class="py-2">
 		Well never been good at telling about my self. I will try my best :) A few things describing me:
 	</p>
 
 	
-	<ul class="p-1">
-		<li>Code enthusiast.</li>
-		<li>Table top gamer.</li>
-		<li>Loving boyfriend.</li>
-		<li>Loving father.</li>
-		<li>Cat owner.</li>
+	<ul class="py-2">
+		<li class="p-0.5 px-2">Code enthusiast.</li>
+		<li class="p-0.5 px-2">Table top gamer.</li>
+		<li class="p-0.5 px-2">Loving boyfriend.</li>
+		<li class="p-0.5 px-2">Loving father.</li>
+		<li class="p-0.5 px-2">Cat owner.</li>
 	</ul>
 
-	<p class="p-1">
+	<p class="py-2">
 	Going more in depth. I love to code. I love to learn and improve. Being that design patterns or new tech. That is why I attend meetups, hackathons and the sorts. This is also kind of the reason why I wanted to take up blogging. Sharing the awesome stuff I found. I have tried a couple of times and failed. Used to much time on “What plugins should I try?”, “What design / Theme do I want?”, “What do I want to blog about?” and so on. When I should simply just have made alot of small blog posts about what I had been looking on that week.
 	</p>
-	<p class="p-1">
+	<p class="py-2">
 	Over the last few years I have gone from being a online gamer to being a table top gamer with my girlfriend. We bought a house and moved to Gedved and didn’t really know anybody in the area. We decided to start a local table top group. We thought it would be awesome way to learn new people and invite strangers in for board game evenings. So we started a Facebook group and made some comments in different local facebook groups that anyone who wanted to come by and play some games were welcome.
 	</p>
-	<p class="p-1">
+	<p class="py-2">
 	Today we are me, my Girlfriend, a baby and 2 cats. Here we have a house with plenty of room for us all. Beside board gaming we love to go for long walks. We love to travel and can’t wait to take our baby with us out on adventures. Below you can see a few pictures of us.
 	</p>
 	
@@ -44,6 +62,25 @@
 				<img height="250" width="333.328" src="https://ik.imagekit.io/topswagcode/tr:h-250/pjevs.jpg" alt="Cat Pjevs" />
 			</div>
 		</div>
+	</div>
+
+	<p class="py-2">
+		Besides blogging I also spent alot of time doing Youtube clips. It takes time to finish a project. Then recording it all and cutting it out and publishing to Youtube. I also starting doing public talks in local meetup groups and Jetbrains invited me to do a online Webinar on WebAssembly which is a subject I have been following for a while now.
+	</p>
+
+	<div class="grid place-items-center p-5">
+		<div class="carousel carousel-center max-w-md p-4 space-x-4 bg-neutral rounded-box">
+			<div id="slide1" class="carousel-item">
+				<img class="rounded-box p-2" height="250" src="https://ik.imagekit.io/topswagcode/tr:h-250/grpc.jpg" alt="GRPC" />
+			</div> 
+			<div id="slide2" class="carousel-item">
+				<img class="rounded-box p-2" height="250" src="https://ik.imagekit.io/topswagcode/tr:h-250/wasm.jpg" alt="WASM" />
+			</div> 
+			<div id="slide3" class="carousel-item">
+				<img class="rounded-box p-2" height="250" src="https://ik.imagekit.io/topswagcode/tr:h-250/security.jpg" alt="Security" />
+			</div>
+		</div>
+		<div><a href="#slide1">#slide1</a><a href="#slide2">#slide2</a><a href="#slide3">#slide3</a></div>
 	</div>
 </Content>
 
