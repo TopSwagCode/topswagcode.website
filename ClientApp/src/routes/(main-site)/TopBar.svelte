@@ -7,7 +7,8 @@
 	const handleClick = (link) => {
 		goto(link);
 	}
-	
+
+	let name = "TopSwagCode"
 </script>
 
 
@@ -24,19 +25,19 @@
 		<!-- svelte-ignore a11y-label-has-associated-control -->
 		<label tabindex="1" class="btn btn-ghost btn-circle avatar">
 		  <div class="w-10 rounded-full">
-			<img alt="Profile Icon" src="https://ik.imagekit.io/topswagcode/tr:w-30,h-30/banner-logo.png?updatedAt=1687973066635" />
+			<img alt="Profile Icon" src="/api/identicon?name={name}&size=30" />
 		  </div>
 		</label>
 		<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-		<ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+		<ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content rounded-box w-52">
 		  <li>
-			<a href="/" class="justify-between">
-			  Profile
+			<a href="/" class="text-primary font-bold justify-between">
+			  IdentIcon
 			  <span class="badge">New</span>
 			</a>
 		  </li>
-		  <li><a href="/" >Settings</a></li>
-		  <li><a href="/" >Logout</a></li>
+		  <li><input bind:value="{name}" /></li>
+		  <li><a href="#" class="text-primary font-bold" >Change icon ☝️</a></li>
 		</ul>
 	  </div>
 	</div>

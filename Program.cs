@@ -1,3 +1,4 @@
+using Jdenticon.AspNetCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Google;
 
@@ -23,17 +24,10 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
     app.UseHttpsRedirection();
 }
-/*
-var cacheMaxAgeOneWeek = (60 * 60 * 24 * 7).ToString();
-app.UseStaticFiles(new StaticFileOptions
-{
-    OnPrepareResponse = ctx =>
-    {
-        ctx.Context.Response.Headers.Append(
-             "Cache-Control", $"public, max-age={cacheMaxAgeOneWeek}");
-    }
-});
-*/
+
+
+app.UseStaticFiles();
+app.UseJdenticon();
 app.UseRouting();
 
 app.MapControllerRoute(
