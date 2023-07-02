@@ -3,21 +3,25 @@
 	import Content from '../Content.svelte';
 
 	let slideNumber = 0;
-	let timeout = 0;
+	let interval = 0;
 
-	onMount(() => {
-		setInterval(ChangeSlide, 5000);
+	/*
+	onMount( async () => {
+		interval = setInterval(ChangeSlide, 5000); // Async is workaround for letting Sveltekit know not to start OnMount before page is reached.
   	});
 
 	function ChangeSlide(){
 		slideNumber++;
 		slideNumber = slideNumber % 3;
-		window.history.replaceState(history.state, '', "/about/#slide"+slideNumber);
+		let slide = "#slide"+slideNumber;
+		var element = document.getElementById(slide);
+		element.click();
 	}
 
 	onDestroy(() => {
-		clearInterval(timeout);
+		clearInterval(interval);
 	});
+	*/
 </script>
 
 <svelte:head>
@@ -65,22 +69,22 @@
 	</div>
 
 	<p class="py-2">
-		Besides blogging I also spent alot of time doing Youtube clips. It takes time to finish a project. Then recording it all and cutting it out and publishing to Youtube. I also starting doing public talks in local meetup groups and Jetbrains invited me to do a online Webinar on WebAssembly which is a subject I have been following for a while now.
+		
 	</p>
 
 	<div class="grid place-items-center p-5">
-		<div class="carousel carousel-center max-w-md p-4 space-x-4 bg-neutral rounded-box">
-			<div id="slide1" class="carousel-item">
+		<div class="max-w-4xl carousel carousel-center max-w-md p-4 space-x-4 bg-neutral rounded-box">
+			<div id="slide0" class="carousel-item">
 				<img class="rounded-box p-2" height="250" src="https://ik.imagekit.io/topswagcode/tr:h-250/grpc.jpg" alt="GRPC" />
 			</div> 
-			<div id="slide2" class="carousel-item">
+			<div id="slide1" class="carousel-item">
 				<img class="rounded-box p-2" height="250" src="https://ik.imagekit.io/topswagcode/tr:h-250/wasm.jpg" alt="WASM" />
 			</div> 
-			<div id="slide3" class="carousel-item">
+			<div id="slide2" class="carousel-item">
 				<img class="rounded-box p-2" height="250" src="https://ik.imagekit.io/topswagcode/tr:h-250/security.jpg" alt="Security" />
 			</div>
 		</div>
-		<div><a href="#slide1">#slide1</a><a href="#slide2">#slide2</a><a href="#slide3">#slide3</a></div>
+		<div class="invisible"><a id="#slide0" href="#slide0">#slide0</a><a id="#slide1"  href="#slide1">#slide1</a><a id="#slide2"  href="#slide2">#slide2</a></div>
 	</div>
 </Content>
 
