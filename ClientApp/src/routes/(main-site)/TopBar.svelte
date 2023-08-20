@@ -3,12 +3,20 @@
 	import logo from '$lib/images/svelte-logo.svg';
 	import github from '$lib/images/github.svg';
 	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
 	
 	const handleClick = (link) => {
 		goto(link);
 	}
 
+	let url = "https://topswagcode.com/assets/favicon.png";
 	let name = "TopSwagCode"
+
+	onMount(async () =>{
+
+		url="/api/identicon?name="+name+"&size=30";
+	});
+	
 </script>
 
 
@@ -25,7 +33,7 @@
 		<!-- svelte-ignore a11y-label-has-associated-control -->
 		<label tabindex="1" class="btn btn-ghost btn-circle avatar">
 		  <div class="w-10 rounded-full">
-			<img alt="Profile Icon" src="/api/identicon?name={name}&size=30" />
+			<img alt="Profile Icon" src="{url}" />
 		  </div>
 		</label>
 		<!-- svelte-ignore a11y-no-noninteractive-tabindex -->

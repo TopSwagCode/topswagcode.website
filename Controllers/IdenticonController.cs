@@ -7,9 +7,8 @@ namespace topswagcode.Controllers;
 [ApiController]
 public class IdenticonController : Controller
 {
-    // GET api/values
     [HttpGet]
-    public async Task<IActionResult> Get(string name, int size)
+    public async Task<IActionResult> Get(string name = "TopSwagCode", int size = 30)
     {
         using (MemoryStream ms = new MemoryStream())
         {
@@ -21,5 +20,4 @@ public class IdenticonController : Controller
             return File(ms.ToArray(), "image/png");
         }
     }
-    
 }
